@@ -546,7 +546,7 @@ export default function GamePage() {
                 transition={{ duration: 1.5, repeat: Infinity }}
                 style={{
                   textAlign: 'center', marginTop: '1.25rem',
-                  fontFamily: 'Space Mono', fontSize: '0.75rem', color: '#CCFF00',
+                  fontFamily: 'Space Mono', fontSize: '0.75rem', color: '#3455eb',
                 }}
                 data-testid="your-turn-indicator"
               >
@@ -565,10 +565,10 @@ export default function GamePage() {
       {myPlayer && (
         <div style={{ marginTop: '1.5rem', padding: '0.75rem 1rem', border: '1px solid #1a1a1a', display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
           <div style={{ fontFamily: 'Space Mono', fontSize: '0.65rem', color: '#A3A3A3' }}>
-            ОЧКИ: <span style={{ color: '#CCFF00' }}>{myPlayer.score}</span>
+            ОЧКИ: <span style={{ color: '#3455eb' }}>{myPlayer.score}</span>
           </div>
           <div style={{ fontFamily: 'Space Mono', fontSize: '0.65rem', color: '#A3A3A3' }}>
-            ПРАВИЛЬНО: <span style={{ color: '#CCFF00' }}>{myPlayer.correct_answers}</span>
+            ПРАВИЛЬНО: <span style={{ color: '#22c55e' }}>{myPlayer.correct_answers}</span>
           </div>
           <div style={{ fontFamily: 'Space Mono', fontSize: '0.65rem', color: '#A3A3A3' }}>
             НЕВЕРНО: <span style={{ color: '#FF3366' }}>{myPlayer.wrong_answers}</span>
