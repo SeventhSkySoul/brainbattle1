@@ -252,7 +252,7 @@ export default function LobbyPage() {
               )}
             </AnimatePresence>
             {currentTeam !== 'B' && game?.state === 'waiting' && (
-              <button className="bb-btn" style={{ width: '100%', marginTop: '0.5rem', borderColor: 'rgba(0,180,216,0.5)', color: '#00B4D8', fontSize: '0.6rem', padding: '0.4rem' }}
+              <button className="bb-btn" style={{ width: '100%', marginTop: '0.5rem', borderColor: tc.B.border, color: tc.B.text, fontSize: '0.6rem', padding: '0.4rem' }}
                 onClick={() => handleChooseTeam('B')} data-testid="btn-join-team-b">
                 ВЫБРАТЬ
               </button>
