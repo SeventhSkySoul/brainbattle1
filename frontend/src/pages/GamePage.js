@@ -39,6 +39,7 @@ const playSound = (type) => {
 };
 
 function ScoreBoard({ game }) {
+  const tc = getTeamColors(game);
   if (game?.mode === 'ffa') {
     const sorted = [...(game?.players || [])].sort((a, b) => b.score - a.score).slice(0, 5);
     return (
@@ -62,13 +63,17 @@ function ScoreBoard({ game }) {
   return (
     <div style={{ display: 'flex', gap: '1.25rem', alignItems: 'center', userSelect: 'none' }}>
       <div style={{ textAlign: 'center' }}>
-        <div style={{ fontFamily: 'Space Mono', fontSize: '0.55rem', color: '#FF6B35', textTransform: 'uppercase', letterSpacing: '0.1em' }}>КОМ. А</div>
-        <div style={{ fontFamily: 'Syne', fontSize: '1.75rem', fontWeight: 900, color: game?.current_team === 'A' ? '#FF6B35' : '#A3A3A3', lineHeight: 1 }} data-testid="score-team-a">{scoreA}</div>
+        <div style={{ fontFamily: 'Space Mono', fontSize: '0.55rem', color: tc.A.text, textTransform: 'uppercase', letterSpacing: '0.1em' }}>
+          <span className="hide-mobile">КОМАНДА </span>А
+        </div>
+        <div style={{ fontFamily: 'Syne', fontSize: '1.75rem', fontWeight: 900, color: game?.current_team === 'A' ? tc.A.text : '#A3A3A3', lineHeight: 1 }} data-testid="score-team-a">{scoreA}</div>
       </div>
       <div style={{ fontFamily: 'Syne', fontSize: '1rem', color: '#333', fontWeight: 800 }}>:</div>
       <div style={{ textAlign: 'center' }}>
-        <div style={{ fontFamily: 'Space Mono', fontSize: '0.55rem', color: '#00B4D8', textTransform: 'uppercase', letterSpacing: '0.1em' }}>КОМ. Б</div>
-        <div style={{ fontFamily: 'Syne', fontSize: '1.75rem', fontWeight: 900, color: game?.current_team === 'B' ? '#00B4D8' : '#A3A3A3', lineHeight: 1 }} data-testid="score-team-b">{scoreB}</div>
+        <div style={{ fontFamily: 'Space Mono', fontSize: '0.55rem', color: tc.B.text, textTransform: 'uppercase', letterSpacing: '0.1em' }}>
+          <span className="hide-mobile">КОМАНДА </span>Б
+        </div>
+        <div style={{ fontFamily: 'Syne', fontSize: '1.75rem', fontWeight: 900, color: game?.current_team === 'B' ? tc.B.text : '#A3A3A3', lineHeight: 1 }} data-testid="score-team-b">{scoreB}</div>
       </div>
     </div>
   );
