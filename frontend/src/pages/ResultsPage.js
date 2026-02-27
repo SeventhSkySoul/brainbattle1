@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useGame } from '../context/GameContext';
-import { API, TEAM_COLORS, storage, STORAGE_KEYS } from '../utils';
+import { API, getTeamColors, storage, STORAGE_KEYS } from '../utils';
 import axios from 'axios';
 
 function StatBar({ value, max, color }) {
