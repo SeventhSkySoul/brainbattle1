@@ -225,15 +225,15 @@ export default function HomePage() {
             exit={{ opacity: 0, y: -20 }}
             style={{
               position: 'relative', zIndex: 10,
-              background: 'rgba(204,255,0,0.1)',
-              border: '1px solid rgba(204,255,0,0.3)',
+              background: 'rgba(52,85,235,0.1)',
+              border: '1px solid rgba(52,85,235,0.3)',
               padding: '0.75rem 2rem',
               display: 'flex', alignItems: 'center', justifyContent: 'space-between',
               flexWrap: 'wrap', gap: '0.5rem',
             }}
           >
             <span style={{ fontFamily: 'Space Mono', fontSize: '0.75rem', color: '#A3A3A3' }}>
-              Обнаружена активная игра с PIN <span style={{ color: '#CCFF00' }}>{savedSession.pin}</span>
+              Обнаружена активная игра с PIN <span style={{ color: '#3455eb' }}>{savedSession.pin}</span>
             </span>
             <div style={{ display: 'flex', gap: '0.5rem' }}>
               <button className="bb-btn bb-btn-primary" onClick={handleRejoin} data-testid="btn-rejoin" disabled={loading} style={{ padding: '0.5rem 1rem', fontSize: '0.65rem' }}>
