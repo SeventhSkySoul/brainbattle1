@@ -719,8 +719,6 @@ async def handle_skip(game: dict, player_id: str):
         return {"success": True}
     
     return {"error": "Нельзя пропустить"}
-
-async def handle_next_question(game: dict, player_id: str):
     if game["host_id"] != player_id:
         return {"error": "Только ведущий"}
     await advance_question(game, reason="host_next")
