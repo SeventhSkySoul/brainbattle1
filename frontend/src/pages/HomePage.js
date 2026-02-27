@@ -260,7 +260,7 @@ export default function HomePage() {
           <div className="bb-badge" style={{ marginBottom: '1.5rem' }}>КОМАНДНЫЙ КВИЗ В РЕАЛЬНОМ ВРЕМЕНИ</div>
           <h1 style={{ fontSize: 'clamp(2.5rem, 8vw, 5rem)', margin: '0 0 1rem', lineHeight: 1 }}>
             УМНЕЕ?<br />
-            <span style={{ color: '#CCFF00' }}>ДОКАЖИ.</span>
+            <span style={{ color: '#3455eb' }}>ДОКАЖИ.</span>
           </h1>
           <p style={{ color: '#A3A3A3', fontSize: '0.9rem', maxWidth: 500, margin: '0 auto', lineHeight: 1.8 }}>
             Создай игру, отправь PIN друзьям и соревнуйся в реальном времени.<br />
