@@ -35,14 +35,14 @@ const playSound = (type) => {
 // Logo 3D component
 function Logo3D() {
   return (
-    <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+    <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flexShrink: 0 }}>
       <div className="logo-3d">BB</div>
       <div>
-        <div style={{ fontFamily: 'Syne', fontWeight: 900, fontSize: '1.75rem', lineHeight: 1, color: '#CCFF00' }}>
+        <div style={{ fontFamily: 'Syne', fontWeight: 900, fontSize: 'clamp(1.1rem, 4vw, 1.75rem)', lineHeight: 1, color: '#3455eb' }}>
           BRAIN<span style={{ color: '#FF3366' }}>BATTLE</span>
         </div>
-        <div style={{ fontFamily: 'Space Mono', fontSize: '0.6rem', color: '#A3A3A3', letterSpacing: '0.2em' }}>
-          POWERED BY QUIZBATTLE
+        <div style={{ fontFamily: 'Space Mono', fontSize: '0.55rem', color: '#A3A3A3', letterSpacing: '0.15em' }}>
+          QUIZBATTLE
         </div>
       </div>
     </div>
