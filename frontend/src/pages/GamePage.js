@@ -59,7 +59,7 @@ function ScoreBoard({ game }) {
             padding: '0.25rem 0.5rem',
             border: '1px solid #262626',
             background: i === 0 ? 'rgba(204,255,0,0.1)' : '#0A0A0A',
-            color: i === 0 ? '#CCFF00' : '#A3A3A3',
+            color: i === 0 ? '#3455eb' : '#A3A3A3',
           }}>
             {i + 1}. {p.name}: {p.score}
           </div>
@@ -167,7 +167,7 @@ export default function GamePage() {
       if (soundEnabled) playSound(isCorrect ? 'correct' : 'wrong');
       
       if (event.points > 0) {
-        setResultMsg({ text: `+${event.points} ОЧКОВ`, color: '#CCFF00' });
+        setResultMsg({ text: `+${event.points} ОЧКОВ`, color: '#3455eb' });
       } else {
         setResultMsg({ text: 'НЕВЕРНО', color: '#FF3366' });
       }

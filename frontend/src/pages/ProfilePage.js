@@ -35,7 +35,7 @@ export default function ProfilePage() {
     <div style={{ minHeight: '100vh', background: '#050505', padding: '2rem 1.5rem', maxWidth: 700, margin: '0 auto' }}>
       {/* Header */}
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '2.5rem' }}>
-        <div style={{ fontFamily: 'Syne', fontWeight: 900, fontSize: '1rem', color: '#CCFF00' }}>
+        <div style={{ fontFamily: 'Syne', fontWeight: 900, fontSize: '1rem', color: '#3455eb' }}>
           BRAIN<span style={{ color: '#FF3366' }}>BATTLE</span>
         </div>
         <div style={{ display: 'flex', gap: '0.75rem' }}>
@@ -53,9 +53,9 @@ export default function ProfilePage() {
         <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'center', flexWrap: 'wrap' }}>
           <div style={{
             width: 72, height: 72,
-            border: '2px solid #CCFF00',
+            border: '2px solid #3455eb',
             display: 'flex', alignItems: 'center', justifyContent: 'center',
-            fontFamily: 'Syne', fontWeight: 900, fontSize: '2rem', color: '#CCFF00',
+            fontFamily: 'Syne', fontWeight: 900, fontSize: '2rem', color: '#3455eb',
             flexShrink: 0,
           }}>
             {user.username?.charAt(0).toUpperCase()}
@@ -71,7 +71,7 @@ export default function ProfilePage() {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(120px, 1fr))', gap: '1rem', marginTop: '2rem' }}>
           {[
             { label: 'РЕЙТИНГ', value: user.rating, color: '#FFD600' },
-            { label: 'ИГР СЫГРАНО', value: user.games_played, color: '#CCFF00' },
+            { label: 'ИГР СЫГРАНО', value: user.games_played, color: '#3455eb' },
             { label: 'ПОБЕД', value: user.wins, color: '#00F0FF' },
             { label: 'ПРОЦЕНТ ПОБЕД', value: `${winRate}%`, color: '#FF3366' },
           ].map((stat, i) => (
@@ -130,9 +130,9 @@ export default function ProfilePage() {
                   </div>
                   <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
                     <div style={{ fontFamily: 'Space Mono', fontSize: '0.7rem', color: '#A3A3A3' }}>
-                      Очки: <span style={{ color: '#CCFF00' }}>{myPlayer?.score || 0}</span>
+                      Очки: <span style={{ color: '#3455eb' }}>{myPlayer?.score || 0}</span>
                     </div>
-                    <div style={{ fontFamily: 'Space Mono', fontSize: '0.65rem', color: won ? '#CCFF00' : '#FF3366', fontWeight: 700 }}>
+                    <div style={{ fontFamily: 'Space Mono', fontSize: '0.65rem', color: won ? '#3455eb' : '#FF3366', fontWeight: 700 }}>
                       {won ? 'ПОБЕДА' : 'ПОРАЖЕНИЕ'}
                     </div>
                   </div>

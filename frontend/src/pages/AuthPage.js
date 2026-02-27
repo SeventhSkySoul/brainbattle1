@@ -43,7 +43,7 @@ export default function AuthPage() {
       >
         {/* Logo */}
         <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-          <div style={{ fontFamily: 'Syne', fontWeight: 900, fontSize: '2rem', color: '#CCFF00' }}>
+          <div style={{ fontFamily: 'Syne', fontWeight: 900, fontSize: '2rem', color: '#3455eb' }}>
             BRAIN<span style={{ color: '#FF3366' }}>BATTLE</span>
           </div>
           <div style={{ fontFamily: 'Space Mono', fontSize: '0.6rem', color: '#A3A3A3', letterSpacing: '0.2em', marginTop: '0.25rem' }}>
@@ -63,8 +63,8 @@ export default function AuthPage() {
               data-testid={`auth-tab-${tab.id}`}
               style={{
                 flex: 1, padding: '0.875rem', background: 'none', border: 'none',
-                borderBottom: `2px solid ${mode === tab.id ? '#CCFF00' : 'transparent'}`,
-                color: mode === tab.id ? '#CCFF00' : '#A3A3A3',
+                borderBottom: `2px solid ${mode === tab.id ? '#3455eb' : 'transparent'}`,
+                color: mode === tab.id ? '#3455eb' : '#A3A3A3',
                 fontFamily: 'Space Mono', fontSize: '0.7rem', textTransform: 'uppercase',
                 letterSpacing: '0.1em', cursor: 'pointer', transition: 'all 0.2s',
                 marginBottom: '-1px',

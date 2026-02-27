@@ -21,7 +21,7 @@ export default function LeaderboardPage() {
       {/* Header */}
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '2.5rem' }}>
         <div>
-          <div style={{ fontFamily: 'Syne', fontWeight: 900, fontSize: '1rem', color: '#CCFF00', marginBottom: '0.25rem' }}>
+          <div style={{ fontFamily: 'Syne', fontWeight: 900, fontSize: '1rem', color: '#3455eb', marginBottom: '0.25rem' }}>
             BRAIN<span style={{ color: '#FF3366' }}>BATTLE</span>
           </div>
           <h1 style={{ margin: 0, fontSize: '1.75rem', letterSpacing: '-0.02em' }}>РЕЙТИНГ</h1>
@@ -75,7 +75,7 @@ export default function LeaderboardPage() {
                 background: '#0A0A0A',
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
                 fontFamily: 'Syne', fontWeight: 800, fontSize: '1rem',
-                color: '#CCFF00', flexShrink: 0,
+                color: '#3455eb', flexShrink: 0,
               }}>
                 {user.username?.charAt(0).toUpperCase()}
               </div>
@@ -88,7 +88,7 @@ export default function LeaderboardPage() {
                 </div>
               </div>
               <div style={{ textAlign: 'right', flexShrink: 0 }}>
-                <div style={{ fontFamily: 'Syne', fontSize: '1.25rem', fontWeight: 900, color: '#CCFF00' }}>
+                <div style={{ fontFamily: 'Syne', fontSize: '1.25rem', fontWeight: 900, color: '#3455eb' }}>
                   {user.rating}
                 </div>
                 <div style={{ fontFamily: 'Space Mono', fontSize: '0.55rem', color: '#A3A3A3' }}>РЕЙТИНГ</div>

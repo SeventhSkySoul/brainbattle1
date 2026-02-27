@@ -94,7 +94,7 @@ export default function ResultsPage() {
 
   // Winner text
   let winnerText = '';
-  let winnerColor = '#CCFF00';
+  let winnerColor = '#3455eb';
   if (isTeams) {
     if (winner === 'draw') winnerText = 'НИЧЬЯ!';
     else {
@@ -176,7 +176,7 @@ export default function ResultsPage() {
         </div>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
           {sortedPlayers.map((player, i) => {
-            const teamColor = isTeams ? TEAM_COLORS[player.team]?.text : '#CCFF00';
+            const teamColor = isTeams ? TEAM_COLORS[player.team]?.text : '#3455eb';
             const avgTime = player.answers_count > 0
               ? (player.total_response_time / player.answers_count).toFixed(1)
               : '—';
@@ -189,7 +189,7 @@ export default function ResultsPage() {
                 transition={{ delay: i * 0.05 }}
                 style={{
                   padding: '1rem 1.25rem',
-                  border: `1px solid ${i === 0 && !isTeams ? '#CCFF00' : '#1f1f1f'}`,
+                  border: `1px solid ${i === 0 && !isTeams ? '#3455eb' : '#1f1f1f'}`,
                   background: '#0A0A0A',
                 }}
                 data-testid={`player-stat-${player.id}`}
@@ -211,11 +211,11 @@ export default function ResultsPage() {
                       )}
                     </div>
                   </div>
-                  <div style={{ fontFamily: 'Syne', fontSize: '1.5rem', fontWeight: 900, color: teamColor || '#CCFF00' }}>
+                  <div style={{ fontFamily: 'Syne', fontSize: '1.5rem', fontWeight: 900, color: teamColor || '#3455eb' }}>
                     {player.score || 0}
                   </div>
                 </div>
-                <StatBar value={player.score || 0} max={maxScore} color={teamColor || '#CCFF00'} />
+                <StatBar value={player.score || 0} max={maxScore} color={teamColor || '#3455eb'} />
                 <div style={{ display: 'flex', gap: '1.5rem', marginTop: '0.5rem', flexWrap: 'wrap' }}>
                   <span style={{ fontFamily: 'Space Mono', fontSize: '0.6rem', color: '#A3A3A3' }}>
                     ✓ {player.correct_answers || 0}
@@ -247,21 +247,21 @@ export default function ResultsPage() {
                   display: 'flex', justifyContent: 'space-between', alignItems: 'center',
                   padding: '0.5rem 0.75rem',
                   background: h.is_correct ? 'rgba(204,255,0,0.04)' : 'rgba(255,51,102,0.04)',
-                  borderLeft: `2px solid ${h.is_correct ? '#CCFF00' : '#FF3366'}`,
+                  borderLeft: `2px solid ${h.is_correct ? '#3455eb' : '#FF3366'}`,
                   flexWrap: 'wrap', gap: '0.5rem',
                 }}
               >
                 <div style={{ fontFamily: 'Space Mono', fontSize: '0.65rem' }}>
                   <span style={{ color: '#A3A3A3' }}>Q{h.question_index + 1}</span>
                   {' '}
-                  <span style={{ color: isTeams ? TEAM_COLORS[h.team]?.text : '#CCFF00' }}>{h.player_name}</span>
+                  <span style={{ color: isTeams ? TEAM_COLORS[h.team]?.text : '#3455eb' }}>{h.player_name}</span>
                 </div>
                 <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
                   <span style={{ fontFamily: 'Space Mono', fontSize: '0.6rem', color: '#A3A3A3' }}>
                     {h.response_time?.toFixed(1)}с
                   </span>
                   {h.is_correct ? (
-                    <span style={{ color: '#CCFF00', fontSize: '0.7rem' }}>+{h.points}</span>
+                    <span style={{ color: '#3455eb', fontSize: '0.7rem' }}>+{h.points}</span>
                   ) : (
                     <span style={{ color: '#FF3366', fontSize: '0.7rem' }}>НЕВЕРНО</span>
                   )}

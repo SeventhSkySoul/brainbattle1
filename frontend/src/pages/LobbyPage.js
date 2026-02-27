@@ -14,7 +14,7 @@ function PlayerCard({ player, isCurrentUser, isHost, teamColor }) {
       style={{
         display: 'flex', alignItems: 'center', gap: '0.75rem',
         padding: '0.75rem 1rem',
-        border: `1px solid ${isCurrentUser ? '#CCFF00' : '#1f1f1f'}`,
+        border: `1px solid ${isCurrentUser ? '#3455eb' : '#1f1f1f'}`,
         background: isCurrentUser ? 'rgba(204,255,0,0.05)' : 'transparent',
         marginBottom: '0.5rem',
       }}
@@ -33,7 +33,7 @@ function PlayerCard({ player, isCurrentUser, isHost, teamColor }) {
       <div style={{ flex: 1, minWidth: 0 }}>
         <div style={{ fontFamily: 'Space Mono', fontSize: '0.8rem', fontWeight: 700, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
           {player.name}
-          {isCurrentUser && <span style={{ color: '#CCFF00', marginLeft: '0.5rem', fontSize: '0.6rem' }}>(ВЫ)</span>}
+          {isCurrentUser && <span style={{ color: '#3455eb', marginLeft: '0.5rem', fontSize: '0.6rem' }}>(ВЫ)</span>}
           {isHost && <span style={{ color: '#FFD600', marginLeft: '0.5rem', fontSize: '0.6rem' }}>ВЕДУЩИЙ</span>}
         </div>
       </div>
