@@ -211,9 +211,9 @@ export default function LobbyPage() {
       {game?.mode === 'teams' ? (
         <div style={{ display: 'flex', gap: '0.75rem', marginBottom: '1.25rem', flexDirection: 'row', alignItems: 'flex-start' }}>
           {/* Team A */}
-          <div style={{ flex: 1, minWidth: 0, border: '1px solid rgba(255,107,53,0.3)', padding: '0.875rem', background: 'rgba(255,107,53,0.02)' }}>
+          <div style={{ flex: 1, minWidth: 0, border: `1px solid ${tc.A.border}`, padding: '0.875rem', background: tc.A.bg }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.75rem', userSelect: 'none' }}>
-              <div style={{ fontFamily: 'Syne', fontWeight: 800, fontSize: '0.85rem', color: '#FF6B35' }}>КОМ. А</div>
+              <div style={{ fontFamily: 'Syne', fontWeight: 800, fontSize: '0.85rem', color: tc.A.text }}>КОМАНДА А</div>
               <div style={{ fontFamily: 'Space Mono', fontSize: '0.6rem', color: '#A3A3A3' }}>{teamAPlayers.length}</div>
             </div>
             <AnimatePresence>
