@@ -171,7 +171,7 @@ export default function LobbyPage() {
     <div style={{ minHeight: '100vh', background: '#050505', padding: '1.5rem' }}>
       {/* Header */}
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '2rem', flexWrap: 'wrap', gap: '1rem' }}>
-        <div style={{ fontFamily: 'Syne', fontWeight: 900, fontSize: '1.25rem', color: '#CCFF00' }}>
+        <div style={{ fontFamily: 'Syne', fontWeight: 900, fontSize: '1.25rem', color: '#3455eb' }}>
           BRAIN<span style={{ color: '#FF3366' }}>BATTLE</span>
         </div>
         <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center', flexWrap: 'wrap' }}>
