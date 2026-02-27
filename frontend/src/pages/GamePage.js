@@ -435,7 +435,7 @@ export default function GamePage() {
           {currentAnsweringPlayer && (
             <span style={{ fontFamily: 'Space Mono', fontSize: '0.65rem', color: '#A3A3A3' }}>
               Игрок: <span style={{ color: '#fff' }}>{currentAnsweringPlayer.name}</span>
-              {currentAnsweringPlayer.id === currentPlayerId && <span style={{ color: '#CCFF00' }}> (ВЫ)</span>}
+              {currentAnsweringPlayer.id === currentPlayerId && <span style={{ color: '#3455eb' }}> (ВЫ)</span>}
             </span>
           )}
         </div>
