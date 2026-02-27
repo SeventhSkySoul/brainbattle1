@@ -42,6 +42,23 @@ security = HTTPBearer(auto_error=False)
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
+# Random team color palettes
+_TEAM_PALETTES = [
+    {"A": {"text": "#FF6B35", "bg": "rgba(255,107,53,0.12)", "border": "rgba(255,107,53,0.4)", "name": "КОМАНДА А"},
+     "B": {"text": "#00B4D8", "bg": "rgba(0,180,216,0.12)", "border": "rgba(0,180,216,0.4)", "name": "КОМАНДА Б"}},
+    {"A": {"text": "#EF4444", "bg": "rgba(239,68,68,0.12)", "border": "rgba(239,68,68,0.4)", "name": "КОМАНДА А"},
+     "B": {"text": "#8B5CF6", "bg": "rgba(139,92,246,0.12)", "border": "rgba(139,92,246,0.4)", "name": "КОМАНДА Б"}},
+    {"A": {"text": "#F59E0B", "bg": "rgba(245,158,11,0.12)", "border": "rgba(245,158,11,0.4)", "name": "КОМАНДА А"},
+     "B": {"text": "#10B981", "bg": "rgba(16,185,129,0.12)", "border": "rgba(16,185,129,0.4)", "name": "КОМАНДА Б"}},
+    {"A": {"text": "#EC4899", "bg": "rgba(236,72,153,0.12)", "border": "rgba(236,72,153,0.4)", "name": "КОМАНДА А"},
+     "B": {"text": "#06B6D4", "bg": "rgba(6,182,212,0.12)", "border": "rgba(6,182,212,0.4)", "name": "КОМАНДА Б"}},
+    {"A": {"text": "#F97316", "bg": "rgba(249,115,22,0.12)", "border": "rgba(249,115,22,0.4)", "name": "КОМАНДА А"},
+     "B": {"text": "#6366F1", "bg": "rgba(99,102,241,0.12)", "border": "rgba(99,102,241,0.4)", "name": "КОМАНДА Б"}},
+]
+
+def _pick_team_colors() -> dict:
+    return random.choice(_TEAM_PALETTES)
+
 # ============================================================
 # BACKUP QUESTIONS
 # ============================================================
