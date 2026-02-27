@@ -129,10 +129,17 @@ export default function LobbyPage() {
 
   const copyPin = () => {
     const gameUrl = `${window.location.origin}?pin=${pin}`;
-    navigator.clipboard.writeText(gameUrl).then(() => {
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
+    navigator.clipboard.writeText(gameUrl).catch(() => {
+      // Fallback
+      const el = document.createElement('textarea');
+      el.value = gameUrl;
+      document.body.appendChild(el);
+      el.select();
+      document.execCommand('copy');
+      document.body.removeChild(el);
     });
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
   };
 
   if (!game && !error) {
