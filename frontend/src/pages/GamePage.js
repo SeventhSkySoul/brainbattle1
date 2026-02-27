@@ -243,17 +243,27 @@ export default function GamePage() {
     return () => clearInterval(timerRef.current);
   }, [timerRunning, game?.state, soundEnabled]);
 
-  // Sync timer with server when game state updates
+  // Sync timer with server on game state update  
   useEffect(() => {
-    if (!game || game.state !== 'in_progress') return;
+    if (!game) return;
+    if (game.state === 'paused') {
+      clearInterval(timerRef.current);
+      setTimerRunning(false);
+      return;
+    }
+    if (game.state !== 'in_progress') return;
     const startTime = game.question_start_time;
     if (!startTime) return;
     const elapsed = (Date.now() - new Date(startTime).getTime()) / 1000;
     const remaining = Math.max(0, (game.time_per_question || 30) - elapsed);
-    setTimeLeft(Math.round(remaining));
-    if (!game.answer_given) setTimerRunning(true);
-    else setTimerRunning(false);
-  }, [game?.current_question_index, game?.question_start_time]);
+    if (!game.answer_given) {
+      setTimeLeft(Math.round(remaining));
+      setTimerRunning(true);
+    } else {
+      clearInterval(timerRef.current);
+      setTimerRunning(false);
+    }
+  }, [game?.question_start_time, game?.state, game?.answer_given]);
 
   // Determine if it's my turn
   useEffect(() => {
