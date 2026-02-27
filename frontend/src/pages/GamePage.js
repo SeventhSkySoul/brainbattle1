@@ -344,7 +344,7 @@ export default function GamePage() {
         <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
           <button
             onClick={() => setSoundEnabled(!soundEnabled)}
-            style={{ background: 'none', border: 'none', color: soundEnabled ? '#CCFF00' : '#A3A3A3', cursor: 'pointer', fontSize: '1rem', padding: '0.25rem' }}
+            style={{ background: 'none', border: 'none', color: soundEnabled ? '#3455eb' : '#A3A3A3', cursor: 'pointer', fontSize: '1rem', padding: '0.25rem' }}
             title={soundEnabled ? 'Выкл звук' : 'Вкл звук'}
           >
             {soundEnabled ? '🔊' : '🔇'}
