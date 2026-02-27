@@ -13,11 +13,17 @@ export const STORAGE_KEYS = {
   PIN: 'bb_pin',
 };
 
-// Team colors
-export const TEAM_COLORS = {
-  A: { text: '#FF6B35', bg: 'rgba(255,107,53,0.1)', border: 'rgba(255,107,53,0.4)', name: 'КОМАНДА А' },
-  B: { text: '#00B4D8', bg: 'rgba(0,180,216,0.1)', border: 'rgba(0,180,216,0.4)', name: 'КОМАНДА Б' },
+// Default team colors (fallback when game.team_colors not loaded yet)
+export const DEFAULT_TEAM_COLORS = {
+  A: { text: '#FF6B35', bg: 'rgba(255,107,53,0.12)', border: 'rgba(255,107,53,0.4)', name: 'КОМАНДА А' },
+  B: { text: '#00B4D8', bg: 'rgba(0,180,216,0.12)', border: 'rgba(0,180,216,0.4)', name: 'КОМАНДА Б' },
 };
+
+// Get team colors from game object (dynamic) or fallback
+export function getTeamColors(game) {
+  if (game?.team_colors) return game.team_colors;
+  return DEFAULT_TEAM_COLORS;
+}
 
 export const DIFFICULTY_LABELS = {
   easy: 'ЛЁГКИЙ',
@@ -29,22 +35,6 @@ export const MODE_LABELS = {
   teams: 'КОМАНДНЫЙ',
   ffa: 'КАЖДЫЙ ЗА СЕБЯ',
 };
-
-// Format time mm:ss
-export function formatTime(seconds) {
-  const s = Math.max(0, Math.floor(seconds));
-  return s > 0 ? `${s}` : '0';
-}
-
-// Get player's current turn in team
-export function getCurrentTurnPlayer(game) {
-  if (!game || game.mode !== 'teams') return null;
-  const team = game.current_team;
-  const teamPlayers = game.teams?.[team] || [];
-  if (!teamPlayers.length) return null;
-  const idx = (game.current_player_index?.[team] || 0) % teamPlayers.length;
-  return teamPlayers[idx];
-}
 
 // Storage helpers
 export const storage = {
