@@ -483,7 +483,9 @@ export default function GamePage() {
           <span style={{ fontFamily: 'Space Mono', fontSize: '0.6rem', color: '#A3A3A3' }}>✓ <b style={{ color: '#22c55e' }}>{myPlayer.correct_answers}</b></span>
           <span style={{ fontFamily: 'Space Mono', fontSize: '0.6rem', color: '#A3A3A3' }}>✗ <b style={{ color: '#FF3366' }}>{myPlayer.wrong_answers}</b></span>
           {game.mode === 'teams' && myPlayer.team && (
-            <span style={{ fontFamily: 'Space Mono', fontSize: '0.6rem', color: myPlayer.team === 'A' ? '#FF6B35' : '#00B4D8' }}>КОМ. {myPlayer.team}</span>
+            <span style={{ fontFamily: 'Space Mono', fontSize: '0.6rem', color: myPlayer.team === 'A' ? tc.A.text : tc.B.text }}>
+              КОМАНДА {myPlayer.team === 'A' ? 'А' : 'Б'}
+            </span>
           )}
         </div>
       )}
