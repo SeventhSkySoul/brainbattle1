@@ -33,8 +33,7 @@ function PlayerCard({ player, isCurrentUser, isHost, teamColor }) {
       <div style={{ flex: 1, minWidth: 0 }}>
         <div style={{ fontFamily: 'Space Mono', fontSize: '0.8rem', fontWeight: 700, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
           {player.name}
-          {isCurrentUser && <span style={{ color: '#3455eb', marginLeft: '0.5rem', fontSize: '0.6rem' }}>(ВЫ)</span>}
-          {isHost && <span style={{ color: '#FFD600', marginLeft: '0.5rem', fontSize: '0.6rem' }}>ВЕДУЩИЙ</span>}
+          {isCurrentUser && <span style={{ color: '#3455eb', marginLeft: '0.5rem', fontSize: '0.6rem' }}>(ВЫ)</span>}          {isHost && <span style={{ color: '#FFD600', marginLeft: '0.5rem', fontSize: '0.6rem' }}>ВЕДУЩИЙ</span>}
         </div>
       </div>
       {player.disqualified && (
